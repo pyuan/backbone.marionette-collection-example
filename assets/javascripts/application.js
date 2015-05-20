@@ -6,6 +6,12 @@ $(document).ready(function(){
   ]);
  
 	MyApp.start({cats: cats});
+
+	cats.add(new AngryCat({ 
+		name: 'Cranky Cat', 
+		image_path: 'assets/images/cat4.jpg',
+		rank: cats.size() + 1 
+	}));
 });
 
 MyApp = new Backbone.Marionette.Application();
@@ -22,6 +28,14 @@ MyApp.addInitializer(function(options) {
 });
 
 AngryCat = Backbone.Model.extend({
+
+	defaults: {
+    votes: 0
+  },
+ 
+  addVote: function(){
+    this.set('votes', this.get('votes') + 1);
+  },
 
 	rankUp: function() {
 		this.set({rank: this.get('rank') - 1});
@@ -43,9 +57,17 @@ AngryCats = Backbone.Collection.extend({
 	    ++rank;
 	  });
 
+	  this.on('add', function(cat){
+			if( ! cat.get('rank') ){
+				var error =  Error("Cat must have a rank defined before being added to the collection");
+				error.name = "NoRankError";
+				throw error;
+			}
+		});
+
 	  var self = this;
 
-	  MyApp.on('rank:up', function(cat){
+	  MyApp.on('rank:up', function(cat) {
 		  console.log("rank up");
 			if (cat.get('rank') == 1) {
 				// can't increase rank of top-ranked cat
@@ -56,7 +78,7 @@ AngryCats = Backbone.Collection.extend({
 			self.trigger("reset");
 		});
 
-		MyApp.on('rank:down', function(cat){
+		MyApp.on('rank:down', function(cat) {
 		  console.log("rank down");
 			if (cat.get('rank') == self.size()) {
 				// can't decrease rank of lowest ranked cat
@@ -65,6 +87,18 @@ AngryCats = Backbone.Collection.extend({
 			self.rankDown(cat);
 			self.sort();
 			self.trigger("reset");
+		});
+
+		MyApp.on('cat:disqualify', function(cat) {
+			console.log("disqualify");
+			var disqualifiedRank = cat.get('rank');
+      var catsToUprank = self.filter(
+        function(cat){ return cat.get('rank') > disqualifiedRank; }
+      );
+      catsToUprank.forEach(function(cat){
+        cat.rankUp();
+      });
+      self.trigger('reset');
 		});
 	},
 
@@ -101,15 +135,27 @@ AngryCatView = Backbone.Marionette.ItemView.extend({
 
   events: {
     'click .rank_up img': 'rankUp',
-    'click .rank_down img': 'rankDown'
+    'click .rank_down img': 'rankDown',
+    'click a.disqualify': 'disqualify'
   },
+
+  initialize: function(){
+		this.listenTo(this.model, 'change:votes', this.render);
+	},
    
-  rankUp: function(){
+  rankUp: function() {
+  	this.model.addVote();
 	  MyApp.trigger('rank:up', this.model);
 	},
 	 
-	rankDown: function(){
+	rankDown: function() {
+		this.model.addVote();
 	  MyApp.trigger('rank:down', this.model);
+	},
+
+	disqualify: function() {
+		MyApp.trigger("cat:disqualify", this.model);
+		this.model.destroy();
 	}
 });
 
