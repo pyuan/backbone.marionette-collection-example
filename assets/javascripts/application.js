@@ -1,8 +1,8 @@
 $(document).ready(function(){
   var cats = new AngryCats([
-    { name: 'Wet Cat', image_path: 'assets/images/cat2.jpg' },
-    { name: 'Bitey Cat', image_path: 'assets/images/cat1.jpg' },
-    { name: 'Surprised Cat', image_path: 'assets/images/cat3.jpg' }
+    new AngryCat({ name: 'Wet Cat', image_path: 'assets/images/cat2.jpg' }),
+    new AngryCat({ name: 'Bitey Cat', image_path: 'assets/images/cat1.jpg' }),
+    new AngryCat({ name: 'Surprised Cat', image_path: 'assets/images/cat3.jpg' })
   ]);
  
 	MyApp.start({cats: cats});
@@ -29,7 +29,6 @@ AngryCats = Backbone.Collection.extend({
   initialize: function(cats){
 	  var rank = 1;
 	  _.each(cats, function(cat) {
-	  	console.log(cat);
 	    cat.set('rank', rank);
 	    ++rank;
 	  });
@@ -40,7 +39,20 @@ AngryCats = Backbone.Collection.extend({
 AngryCatView = Backbone.Marionette.ItemView.extend({
   template: "#angry_cat-template",
   tagName: 'tr',
-  className: 'angry_cat'
+  className: 'angry_cat',
+
+  events: {
+    'click .rank_up img': 'rankUp',
+    'click .rank_down img': 'rankDown'
+  },
+   
+  rankUp: function(){
+    console.log('rank up');
+  },
+   
+  rankDown: function(){
+    console.log('rank down');
+  }
 });
 
 AngryCatsView = Backbone.Marionette.CompositeView.extend({
