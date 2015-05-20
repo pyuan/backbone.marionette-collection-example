@@ -21,7 +21,17 @@ MyApp.addInitializer(function(options) {
   MyApp.mainRegion.show(angryCatsView);
 });
 
-AngryCat = Backbone.Model.extend({});
+AngryCat = Backbone.Model.extend({
+
+	rankUp: function() {
+		this.set({rank: this.get('rank') - 1});
+	},
+
+	rankDown: function() {
+		this.set({rank: this.get('rank') + 1});
+	}
+
+});
 
 AngryCats = Backbone.Collection.extend({
   model: AngryCat,
@@ -32,6 +42,54 @@ AngryCats = Backbone.Collection.extend({
 	    cat.set('rank', rank);
 	    ++rank;
 	  });
+
+	  var self = this;
+
+	  MyApp.on('rank:up', function(cat){
+		  console.log("rank up");
+			if (cat.get('rank') == 1) {
+				// can't increase rank of top-ranked cat
+				return true;
+			}
+			self.rankUp(cat);
+			self.sort();
+			self.trigger("reset");
+		});
+
+		MyApp.on('rank:down', function(cat){
+		  console.log("rank down");
+			if (cat.get('rank') == self.size()) {
+				// can't decrease rank of lowest ranked cat
+				return true;
+			}
+			self.rankDown(cat);
+			self.sort();
+			self.trigger("reset");
+		});
+	},
+
+	comparator: function(cat) {
+	  return cat.get('rank');
+	},
+
+	rankUp: function(cat) {
+		// find the cat we're going to swap ranks with
+		var rankToSwap = cat.get('rank') - 1;
+		var otherCat = this.at(rankToSwap - 1);
+	 
+		// swap ranks
+		cat.rankUp();
+		otherCat.rankDown();
+	},
+	 
+	rankDown: function(cat) {
+		// find the cat we're going to swap ranks with
+		var rankToSwap = cat.get('rank') + 1;
+		var otherCat = this.at(rankToSwap - 1);
+	 
+		// swap ranks
+		cat.rankDown();
+		otherCat.rankUp();
 	}
 
 });
@@ -47,12 +105,12 @@ AngryCatView = Backbone.Marionette.ItemView.extend({
   },
    
   rankUp: function(){
-    console.log('rank up');
-  },
-   
-  rankDown: function(){
-    console.log('rank down');
-  }
+	  MyApp.trigger('rank:up', this.model);
+	},
+	 
+	rankDown: function(){
+	  MyApp.trigger('rank:down', this.model);
+	}
 });
 
 AngryCatsView = Backbone.Marionette.CompositeView.extend({
@@ -63,10 +121,17 @@ AngryCatsView = Backbone.Marionette.CompositeView.extend({
   itemView: AngryCatView,
 
   initialize: function() {
-    //this.listenTo(this.collection, "sort", this.renderCollection);
+    this.listenTo(this.collection, "sort", this.renderCollection);
   },
 
   appendHtml: function(collectionView, itemView) {
     collectionView.$("tbody").append(itemView.el);
   }
 });
+
+
+
+
+
+
+
