@@ -1,0 +1,271 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"visi",
+				"visibleItems"
+			],
+			[
+				"dis",
+				"dismissBtn2"
+			],
+			[
+				"pym",
+				"pymkEl"
+			],
+			[
+				"DIS",
+				"DISMISSED_CLASS"
+			],
+			[
+				"DI",
+				"DISMISSED_CLASS"
+			],
+			[
+				"num",
+				"numVisibleItems"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/pyuan/Desktop/notes.txt",
+			"settings":
+			{
+				"buffer_size": 695,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/pyuan/Documents/git/helloworld/hello.txt",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/demo/impl/jsp/demo/demo_example_jsp_en_US.properties",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/demo/impl/jsp/demo/demo_example_jsp_complete_en_US.properties",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/demo/impl/jsp/demo/demo_example_jsp.jsp",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/demo/impl/jsp/demo/demo_example_jsp_complete.jsp",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/templates/pymk_exercise.tl",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/static/scss/apps/demo/example/pymk.scss",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/test/js/specs/scripts/apps/demo/example/pymk.spec.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/test/js/specs/scripts/apps/demo/example/complete/pymk.spec.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/test/js/specs/scripts/apps/demo/example/pymk.fixture.html",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/test/javascripts/specs/pymk.spec.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/static/scripts/apps/demo/example/pymk_init.nocheck.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/static/scss/apps/demo/example/complete/pymk.scss",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/content/static/scripts/apps/demo/example/pymk.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/trunk/content/static/scripts/apps/demo/example/pymk_init.nocheck.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/trunk/content/static/scripts/apps/demo/example/pymk.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/javascripts/pymk_init.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/trunk/content/static/scripts/apps/demo/example/complete/pymk_init.nocheck.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/javascripts/pymk.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/trunk/content/static/tl/apps/demo/example/pymk_dust.tl",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/scss/pymk_complete.scss",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/javascripts/pymk_complete.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/javascripts/pymk_complete_init.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/test/javascripts/specs/pymk.fixture.html",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/test/javascripts/specs/complete/pymk.spec.js",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/app/controllers/PymkControllerExercise.scala",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/scss/pymk.scss",
+		"/Volumes/pyuan-ld1.linkedin.biz/workspace/webdevbootcamp_trunk/webdevbootcamp-frontend/public/templates/pymk.tl",
+		"/Users/pyuan/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/pyuan/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/pyuan/.ssh/pyuan_at_linkedin.com_dsa_key",
+		"/Users/pyuan/.ssh/pyuan_at_linkedin.com_dsa_key.pub"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"familiarName",
+			"demo_example__chrome_head_title__pymk",
+			"\");\n",
+			"profileImg",
+			"i18n_no_results",
+			"i18n_connections",
+			"i18n_alt",
+			"profileImg"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/pyuan/Desktop/notes.txt",
+					"settings":
+					{
+						"buffer_size": 695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								695,
+								695
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								632,
+								632
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 402.0,
+	"status_bar_visible": true
+}
