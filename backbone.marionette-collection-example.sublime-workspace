@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"cats",
+				"catsToUprank"
+			],
+			[
+				"Ang",
+				"AngryCat"
+			],
+			[
 				"visi",
 				"visibleItems"
 			],
@@ -42,28 +50,28 @@
 				"buffer_size": 695,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 685,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 67.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 125.0
 	},
 	"distraction_free":
 	{
@@ -76,6 +84,10 @@
 	},
 	"file_history":
 	[
+		"/Users/pyuan/Documents/git/backbone.marionette-collection-example/index.html",
+		"/Users/pyuan/Documents/git/backbone.marionette-collection-example/assets/javascripts/application.js",
+		"/Users/pyuan/Library/Application Support/Sublime Text 2/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/pyuan/Documents/git/backbone.marionette-collection-example/assets/css/custom.css",
 		"/Users/pyuan/Documents/git/helloworld/hello.txt",
 		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/demo/impl/jsp/demo/demo_example_jsp_en_US.properties",
 		"/Volumes/pyuan-ld1.linkedin.biz/workspace/network/demo/impl/jsp/demo/demo_example_jsp_complete_en_US.properties",
@@ -150,7 +162,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -172,34 +184,6 @@
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								632,
-								632
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
